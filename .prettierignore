@@ -1,0 +1,8 @@
+# Ignored directory
+www
+dist
+src/scss/vendors
+
+# Ignored files
+*.html
+src/scss/**/*.scss

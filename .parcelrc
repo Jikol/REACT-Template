@@ -1,0 +1,9 @@
+{
+  "extends": "@parcel/config-default",
+  "resolvers": ["parcel-resolver-own", "...", "@parcel/resolver-glob"],
+  "namers": ["parcel-namer-own", "..."],
+  "transformers": {
+    "jsx:*.svg": ["...", "@parcel/transformer-svg-react"],
+    "jsx:*": ["..."]
+  }
+}

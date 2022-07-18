@@ -1,0 +1,10 @@
+/// Module stylesheet for App component
+
+@use "./scss/helpers/mixins" as *;
+
+.app {
+  @include flex(column);
+
+  min-height: 100%;
+  max-height: 100vh;
+}

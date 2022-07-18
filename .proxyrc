@@ -1,0 +1,9 @@
+{
+  "/files": {
+    "target": "http://localhost:80/files/",
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/files": ""
+    }
+  }
+}

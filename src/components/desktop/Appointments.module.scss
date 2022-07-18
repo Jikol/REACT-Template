@@ -1,0 +1,20 @@
+/// Module stylesheet for Appointments component
+
+@use "../../scss/helpers/mixins" as *;
+
+.grid {
+  @include grid;
+  @include grid-place(center stretch);
+  @include fluid-columns(31ch);
+
+  flex: 1 0 1px;
+  gap: 0.8em;
+  overflow: auto;
+  padding-top: 1em;
+
+  &__loader {
+    @include center-translate((
+      left: -100%
+    ));
+  }
+}

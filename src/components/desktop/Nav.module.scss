@@ -1,0 +1,59 @@
+/// Module stylesheet for Nav component
+
+@use "../../scss/helpers/mixins" as *;
+
+$link-height: 3.4em;
+
+.nav {
+  @include flex(column);
+
+  gap: 0.5em;
+
+  &__link {
+    @include flex;
+    @include flex-place(flex-start center);
+    @include font-size(400);
+    @include on-hover {
+      opacity: 1;
+    }
+
+    position: relative;
+    height: $link-height;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    &__indicator {
+      @include size(5px, $link-height - 1em);
+
+      position: absolute;
+      left: -8%;
+      border-radius: 10px;
+      background: var(--grd-sig2-400);
+      visibility: hidden;
+    }
+
+    &__icon {
+      margin-right: 0.5em;
+    }
+
+    &__text {
+      @include flex(column);
+
+      color: var(--clr-sig1-400);
+      font-weight: 700;
+
+      span {
+        line-height: 0.95;
+      }
+
+      span:nth-of-type(1) {
+        text-transform: capitalize;
+      }
+
+      span:nth-of-type(2) {
+        font-variant: small-caps;
+        transform: scale(1.03);
+      }
+    }
+  }
+}

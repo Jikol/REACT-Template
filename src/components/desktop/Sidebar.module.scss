@@ -1,0 +1,24 @@
+/// Module stylesheet for Header component
+
+@use "../../scss/helpers/mixins" as *;
+
+.sidebar {
+  @include flex(column);
+  @include flex-place(space-between flex-start);
+  @include font-size(400);
+
+  flex: 0 0 auto;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  padding-right: 1em;
+  padding-left: 1em;
+  background-color: var(--clr-bg-200);
+
+  &__footer {
+    &__toggle {
+      margin-top: 0.8em;
+      padding-inline: 0.4em;
+      background-color: transparent;
+    }
+  }
+}

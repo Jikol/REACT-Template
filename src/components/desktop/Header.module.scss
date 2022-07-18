@@ -1,0 +1,51 @@
+/// Module stylesheet for Header component
+
+@use "../../scss/helpers/mixins" as *;
+
+.header {
+  @include flex;
+  @include flex-place(space-between center);
+  @include font-size(400);
+
+  flex-basis: 0;
+  height: 3.3em;
+  background-color: var(--clr-bg-200);
+
+  &__start {
+    @include center;
+
+    gap: 0.7em;
+    height: 100%;
+    margin-inline: 0.4rem;
+
+    &__link {
+      @include center;
+
+      height: 100%;
+
+      &:nth-of-type(1) img {
+        height: 100%;
+      }
+
+      &:nth-of-type(2) img {
+        height: 50%;
+        margin-inline: 0.8em;
+      }
+    }
+  }
+
+  &__separator {
+    @include size(2px, 70%);
+
+    border-radius: 50%;
+    background-color: var(--clr-bg-500);
+    transform: rotate(25deg);
+  }
+
+  &__end {
+    @include flex;
+
+    gap: 1em;
+    margin-inline: 0.8em;
+  }
+}

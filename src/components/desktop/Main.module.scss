@@ -1,0 +1,11 @@
+/// Module stylesheet for Main component
+
+@use "../../scss/helpers/mixins" as *;
+
+.main {
+  @include flex;
+  @include font-size(400);
+
+  flex: 1 0 auto;
+  height: 100%;
+}
